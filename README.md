@@ -35,12 +35,12 @@
 
 
 ## ✅주요기능
-![KakaoTalk_20220623_032154562](https://user-images.githubusercontent.com/95482546/175109771-31e29523-8750-4e06-b18f-1ffef08e9d3f.gif)
+![KakaoTalk_20220623_032154562](https://user-images.githubusercontent.com/95482546/175109771-31e29523-8750-4e06-b18f-1ffef08e9d3f.gif)  
 삭제버튼을 누르면 상품이 DB에서 삭제가 되는 동시에 화면에서도 사라진다.  
 개인적으로 이 페이지에서 구현할 수 있는 게 많았는데, 익숙하지 않은 환경이다보니 완성하지 못한 게 아쉬웠다.
 <br/><br/><br/>
 
-![KakaoTalk_20220623_032207032](https://user-images.githubusercontent.com/95482546/175110036-806954b4-d6e7-4e86-855d-06a8eaec33f8.gif)
+![KakaoTalk_20220623_032207032](https://user-images.githubusercontent.com/95482546/175110036-806954b4-d6e7-4e86-855d-06a8eaec33f8.gif)  
 주소 API를 이용해 주소를 검색하고, 검색한 주소를 화면에 입력하는 화면이다.  
 나머지 주소도 입력할 수 있는데, 입력한 주소를 DB에 저장하는 과정은 구현하지 못했다.
 <br/><br/><br/>
