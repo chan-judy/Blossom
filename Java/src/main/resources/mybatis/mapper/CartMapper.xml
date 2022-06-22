@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTDMapper3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.spring.boot.mapper.CartMapper">
+  
+     <select id="cartList" resultType="com.spring.boot.dto.CartVO">
+         SELECT * FROM cart
+     </select>
+     
+     <select id="fetchcartByID" resultType="com.spring.boot.dto.CartVO"
+      parameterType="int">
+         SELECT * FROM cart
+         WHERE p_num  = #{p_num}
+     </select>
+     
+     <select id="sumCount"  resultType="int" >
+     SELECT sum(c_quantity) sumCount FROM cart
+     </select>
+     
+     <select id="sumTotal"  parameterType="com.spring.boot.dto.CartVO" resultType="int">
+     select sum(p_price) sumTotal from cart
+     </select>
+     
+     <update id="updatecart" parameterType="com.spring.boot.dto.CartVO">
+         UPDATE cart
+         SET c_quantity = #{c_quantity} 
+         WHERE p_num = #{p_num}
+     </update>
+     
+     <delete id="deletecart" parameterType="int">
+         DELETE FROM cart
+         WHERE p_num = #{p_num}
+     </delete>
+
+
+
+  </mapper>

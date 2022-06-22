@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTDMapper3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.spring.boot.mapper.OrdersMapper">
+  
+  
+  <insert id="insertOrders" parameterType="com.spring.boot.dto.OrdersVO">
+          INSERT INTO orders(o_num,  m_id,  o_addr1,  o_addr2,  o_addr3,  o_tel, o_date, o_memo, o_state, o_paytype, o_name, 
+          o_name, o_point, c_num, c_dis, o_total, o_price)
+          VALUES(#{o_num}, #{m_id},  #{o_addr1},  #{o_addr2},  #{o_addr3},  #{o_tel},  #{o_date}, 
+          #{o_memo}, #{o_state},  #{o_paytype},  #{o_name},  #{o_name},  #{o_point},  #{c_num},  #{c_dis},  #{o_total},  #{o_price})
+     </insert>
+  
+     <select id="ordersList"  resultType="com.spring.boot.dto.OrdersVO">
+         SELECT * FROM orders
+         ORDER BY o_num
+     </select>     
+     
+     
+     <select id="couponList" resultType="com.spring.boot.dto.OrdersVO">
+     select mem.m_id,
+	 coupon.C_NAME
+	 from mem
+	 inner join coupon on mem.m_id = coupon.m_id;
+     </select>
+     
+      <delete id="deleteAllcart" parameterType="int">
+         DELETE FROM cart
+     </delete>
+    
+  <!--    <select id=fetchOrdersByID resultType="com.spring.boot.dto.OrdersVO"  parameterType="int">
+         SELECT * FROM orders
+         WHERE m_id = #{m_id}
+     </select> -->
+
+  </mapper>
